@@ -55,7 +55,7 @@ public class BindComponent implements Component {
             if (this.isBinding) {
                 if (k == 11) {
                     if (this.moduleComponent.mod instanceof GuiModule) {
-                        this.moduleComponent.mod.setbind(54);
+                        this.moduleComponent.mod.setbind(Keyboard.KEY_RETURN);
                     } else {
                         this.moduleComponent.mod.setbind(0);
                     }

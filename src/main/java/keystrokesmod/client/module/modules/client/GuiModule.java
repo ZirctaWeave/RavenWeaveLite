@@ -6,16 +6,16 @@ import keystrokesmod.client.module.setting.impl.DescriptionSetting;
 import keystrokesmod.client.module.setting.impl.SliderSetting;
 import keystrokesmod.client.module.setting.impl.TickSetting;
 import keystrokesmod.client.utils.Utils;
+import org.lwjgl.input.Keyboard;
 
 public class GuiModule extends Module {
-   public static final int bind = 54;
    public static SliderSetting guiTheme, backgroundOpacity;
    public static DescriptionSetting guiThemeDesc;
    public static TickSetting categoryBackground;
 
    public GuiModule() {
       super("Gui", ModuleCategory.client);
-      withKeycode(54);
+      this.withKeycode(Keyboard.KEY_RETURN);
 
       this.registerSetting(guiTheme = new SliderSetting("Theme", 3.0D, 1.0D, 4.0D, 1.0D));
       this.registerSetting(guiThemeDesc = new DescriptionSetting(Utils.md + "b+"));
