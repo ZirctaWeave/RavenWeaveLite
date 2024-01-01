@@ -1,6 +1,6 @@
 plugins {
     java
-    id("com.github.weave-mc.weave-gradle") version "649dba7468"
+    id("com.github.weave-mc.weave-gradle") version "fac948db7f"
 }
 
 group = "me.PianoPenguin471"
@@ -14,11 +14,10 @@ repositories {
 }
 
 dependencies {
-    compileOnly("com.github.weave-mc:weave-loader:70bd82faa6")
-
+    compileOnly("com.github.weave-mc:weave-loader:v0.2.4")
     compileOnly("org.spongepowered:mixin:0.8.5")
 }
 
 tasks.compileJava {
-    options.release.set(11)
+    options.release.set(17)
 }
